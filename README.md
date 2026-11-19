@@ -15,11 +15,11 @@ DroNet is a compact 8-layer residual convolutional neural network (`resnet8`) tr
 
 During training, total loss combines both tasks with scheduled classification weight and exponential hard-mining decay after epoch 30:
 
-$$L_{\text{tot}} = L_{\text{MSE}} + \max\!\left(0,\; 1 - e^{-0.1\,(\text{epoch} - 10)}\right) L_{\text{BCE}}$$
+$$L_{\text{tot}} = L_{\text{MSE}} + \max\left(0,\; 1 - e^{-0.1\,(\text{epoch} - 10)}\right)L_{\text{BCE}}$$
 
 During flight control (`DroneController` and `ros/dronet_control`), raw predictions are smoothed with low-pass filters into forward velocity $v_k$ and yaw angle $\theta_k$:
 
-$$v_k = (1 - \alpha)\, v_{k-1} + \alpha (1 - p_t)\, V_{\max}, \qquad \theta_k = (1 - \beta)\, \theta_{k-1} + \beta \frac{\pi}{2}\, s_k$$
+$$v_k = (1 - \alpha)v_{k-1} + \alpha (1 - p_t)V_{\max}, \qquad \theta_k = (1 - \beta)\theta_{k-1} + \beta \frac{\pi}{2}s_k$$
 
 ## Reported Results
 
