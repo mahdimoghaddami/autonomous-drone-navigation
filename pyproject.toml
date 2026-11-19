@@ -1,0 +1,32 @@
+[project]
+name = "autonomous-drone-navigation"
+version = "0.1.0"
+description = "DroNet: Learning to Fly by Driving — CNN steering angle & collision probability prediction for autonomous UAV navigation (CSI 5170)"
+readme = "README.md"
+authors = [
+    { name = "Mahdi Moghaddami", email = "mahdiman10@gmail.com" },
+    { name = "Emmanuel Musvaire" },
+]
+requires-python = ">=3.13,<3.15"
+dependencies = [
+    "h5py>=3.16.0",
+    "keras>=3.15.0",
+    "matplotlib>=3.11.0",
+    "numpy>=2.5.0",
+    "opencv-python-headless>=5.1.0",
+    "scikit-learn>=1.9.0",
+    "torch>=2.15.0",
+]
+
+[project.scripts]
+autonomous-drone-navigation = "autonomous_drone_navigation.cli:main"
+dronet = "autonomous_drone_navigation.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+]
