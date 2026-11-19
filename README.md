@@ -31,7 +31,6 @@ $$v_k = (1 - \alpha)v_{k-1} + \alpha (1 - p_t)V_{\max}, \qquad \theta_k = (1 - \
 
 - Confusion matrix: [docs/figures/confusion_matrix.png](docs/figures/confusion_matrix.png)
 - Steering distribution: [docs/figures/steering_histogram.png](docs/figures/steering_histogram.png)
-- Training log snapshot (150 epochs): [docs/figures/training_epoch_150.png](docs/figures/training_epoch_150.png)
 
 ## Repository Structure
 
